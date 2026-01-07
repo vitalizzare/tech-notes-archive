@@ -47,4 +47,19 @@ data = input()
 
 This approach relies on monkey-patching a private, internal method of IPython (`_input_request`). Such internals are not part of the public API and may change or break without notice between IPython or Jupyter releases. Use this technique only for personal workflows, experiments, or short-lived notebooks — not in production or shared environments — unless you are prepared to maintain it over time.
 
+---
 
+P.S. A more reliable approach may be to work with the kernel instance's `raw_input` method:
+
+```python
+instance = get_ipython()
+_raw_input = instance.kernel.raw_input
+
+def input_with_bell(*args,  **kwargs):
+    subprocess.call(['espeak', 'Ding-dong!'])
+    return _raw_input(*args, **kwargs)
+
+instance.kernel.raw_input = input_with_bell
+```
+
+This works with `jupyter-notebook 7.4.7` and `ipykernel 6.30.1`, in addition to the previously mentioned versions.
