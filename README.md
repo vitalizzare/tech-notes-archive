@@ -5,10 +5,12 @@
   
 ## Math problems
 
-* [About the equolity of the unit circles's lengths in dual spaces][3]
-* An olympiad problem on matrices with black-and-white cells
+* [Counting reachable grid points under digit-sum limits][3]
+* [About the equolity of the unit circles's lengths in dual spaces][4]
+<!-- * An olympiad problem on matrices with black-and-white cells -->
 
 
   [1]: ./ipython-jupyter/ipython-notebook-programmatically-read-and-execute-cells.md
   [2]: ./ipython-jupyter/user_input_in_jupyter_notebook.md
-  [3]: ./math/minkowski_measure_of_unit_circles_length.ipynb
+  [3]: ./math/counting-reachable-grid-points-under-digit-sum-limits.ipynb
+  [4]: ./math/minkowski_measure_of_unit_circles_length.ipynb
